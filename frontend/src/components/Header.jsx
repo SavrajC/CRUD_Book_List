@@ -15,17 +15,15 @@ function Header() {
   return (
     <header className='header'>
         <div className="logo">
-            <Link to='/'>Home</Link>
+            <Link to='/'>GoalSetter</Link>
         </div>
         <ul>
             {user ? (
-             <><li>
-                 <Link to='/dashboard'>Dashboard</Link>
-                  </li><li>
-                          <button className='btn' onClick={onLogout}>
-                              <FaSignOutAlt /> Logout
-                          </button>
-                      </li></>
+            <li>
+            <button className ='btn' onClick={onLogout}> 
+                <FaSignOutAlt /> Logout
+            </button>
+        </li>
         ) : (
         <> 
             <li>
