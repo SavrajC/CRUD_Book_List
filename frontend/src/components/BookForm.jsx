@@ -1,9 +1,9 @@
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import {createGoal} from '../features/goals/goalSlice';
+import {createBook} from '../features/books/bookSlice';
 
 
-function GoalForm() {
+function BookForm() {
     const [text,setText] = useState('');
 
     const dispatch = useDispatch();
@@ -11,15 +11,15 @@ function GoalForm() {
     const onSubmit = e => {
         e.preventDefault()
 
-        dispatch(createGoal({text}))
+        dispatch(createBook({text}))
         setText('')
     }
 
   return (
-    <section className="form">GoalForm
+    <section className="form">bookForm
         <form onSubmit={onSubmit}>
             <div className="form-group">
-                <label htmlFor='text'>Goal</label>
+                <label htmlFor='text'>book</label>
                 <input 
                 type="text" 
                 name='text' 
@@ -30,7 +30,7 @@ function GoalForm() {
             </div>
             <div className="form-group">
                 <button className='btn btn-block' type='submit'>
-                    Add Goal
+                    Add Book
                 </button>
             </div>
         </form>   
@@ -38,4 +38,4 @@ function GoalForm() {
   )
 }
 
-export default GoalForm
+export default BookForm
