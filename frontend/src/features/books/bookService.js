@@ -4,7 +4,7 @@ const API_URL = "/api/books/";
 
 //Create books
 
-const createbook = async (bookData, token) => {
+const createBook = async (bookData, token) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -14,7 +14,7 @@ const createbook = async (bookData, token) => {
 
   return response.data;
 };
-const getbooks = async (token) => {
+const getBooks = async (token) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -24,7 +24,7 @@ const getbooks = async (token) => {
 
   return response.data;
 };
-const deletebook = async (bookId, token) => {
+const deleteBook = async (bookId, token) => {
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -35,10 +35,10 @@ const deletebook = async (bookId, token) => {
   return response.data;
 };
 
-const bookservice = {
-  createbook,
-  getbooks,
-  deletebook,
+const bookService = {
+  createBook,
+  getBooks,
+  deleteBook,
 };
 
-export default bookservice;
+export default bookService;

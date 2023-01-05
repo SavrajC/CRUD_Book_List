@@ -4,7 +4,7 @@ import {deleteBook} from '../features/books/bookSlice';
 function BookItem({book}) {
     const dispatch = useDispatch();
   return (
-    <div className="Book">
+    <div className="book">
         <div>
             {new Date(book.createdAt).toLocaleString('en-US')}
         </div>

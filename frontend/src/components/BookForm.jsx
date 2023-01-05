@@ -5,7 +5,7 @@ import {createBook} from '../features/books/bookSlice';
 
 function BookForm() {
     const [text,setText] = useState('');
-
+    
     const dispatch = useDispatch();
     
     const onSubmit = e => {
@@ -16,10 +16,10 @@ function BookForm() {
     }
 
   return (
-    <section className="form">bookForm
+    <section className="form">
         <form onSubmit={onSubmit}>
             <div className="form-group">
-                <label htmlFor='text'>book</label>
+                <label htmlFor='text'>Book</label>
                 <input 
                 type="text" 
                 name='text' 

@@ -14,7 +14,8 @@ export const createBook = createAsyncThunk(
   async (bookData, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
-      return await bookService.createbook(bookData, token);
+      // error might be here
+      return await bookService.createBook(bookData, token);
     } catch (error) {
       const message =
         (error.response &&
@@ -31,7 +32,7 @@ export const getBooks = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
-      return await bookService.getbooks(token);
+      return await bookService.getBooks(token);
     } catch (error) {
       const message =
         (error.response &&
@@ -48,7 +49,7 @@ export const deleteBook = createAsyncThunk(
   async (id, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
-      return await bookService.deletebook(id, token);
+      return await bookService.deleteBook(id, token);
     } catch (error) {
       const message =
         (error.response &&
