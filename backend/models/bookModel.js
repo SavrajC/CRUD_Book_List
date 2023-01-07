@@ -13,6 +13,10 @@ const bookSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add a text value"],
     },
+    rating: {
+      type: String,
+      required: [true, "Please add a rating value"],
+    },
   },
   {
     timestamps: true,

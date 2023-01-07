@@ -17,10 +17,15 @@ const getBooks = asyncHandler(async (req, res) => {
 const setBooks = asyncHandler(async (req, res) => {
   if (!req.body.text) {
     res.status(400);
-    throw new Error("Please add a text field");
+    throw new Error("Please add a Name");
+  }
+  if (!req.body.rating) {
+    res.status(401);
+    throw new Error("Please Enter a Rating!");
   }
   const book = await Book.create({
     text: req.body.text,
+    rating: req.body.rating,
     user: req.user.id,
   });
 
@@ -42,6 +47,7 @@ const updateBooks = asyncHandler(async (req, res) => {
     res.status(401);
     throw new Error("User Not Found");
   }
+
   //Make sure logged in user matches the Book user
   if (book.user.toString() !== req.user.id) {
     res.status(401);
