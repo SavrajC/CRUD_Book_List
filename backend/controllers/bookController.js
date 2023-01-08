@@ -23,9 +23,14 @@ const setBooks = asyncHandler(async (req, res) => {
     res.status(401);
     throw new Error("Please Enter a Rating!");
   }
+  if (!req.body.review) {
+    res.status(401);
+    throw new Error("Please Enter a Review!");
+  }
   const book = await Book.create({
     text: req.body.text,
     rating: req.body.rating,
+    review: req.body.review,
     user: req.user.id,
   });
 

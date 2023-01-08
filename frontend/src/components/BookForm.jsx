@@ -6,15 +6,18 @@ import {createBook} from '../features/books/bookSlice';
 function BookForm() {
     const [text,setText] = useState('');
     const [rating,setRating] = useState('');
+    const [review,setReview] = useState('');
     
     const dispatch = useDispatch();
     
     const onSubmit = e => {
         e.preventDefault()
 
-        dispatch(createBook({text,rating}))
+        dispatch(createBook({text,rating,review}))
         setText('')
         setRating('')
+        setReview('')
+
     }
 
   return (
@@ -36,6 +39,15 @@ function BookForm() {
                 id='rating' 
                 value = {rating} 
                 onChange={(e) => setRating(e.target.value)}
+                 />
+                 <label htmlFor='review' className='label'> Review</label>
+                 <textarea 
+                type="text" 
+                name='review' 
+                id='review' 
+                className='textbox'
+                value = {review} 
+                onChange={(e) => setReview(e.target.value)}
                  />
             </div>
             <div className="form-group">

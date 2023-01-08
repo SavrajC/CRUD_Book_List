@@ -98,7 +98,7 @@ h3 {
 .book {
   background-color: grey;
   margin: 10px 0;
-  padding: 20px 0 10px;
+  padding: 20px 0px 15px;
   position: relative;
 }
 
@@ -116,6 +116,7 @@ h3 {
   width: 70%;
   margin: 0 auto;
   background-color: #141414;
+  padding-bottom: 20px;
 }
 
 .form-group {
@@ -222,4 +223,13 @@ h3 {
 .label {
   opacity: 67%;
   color: #ffffff;
+}
+
+.review {
+  font-size: 17px;
+  color: black;
+  padding: 1px 15px 1px;
+}
+.textbox {
+  min-height: 125px;
 }
