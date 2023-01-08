@@ -21,7 +21,7 @@ function BookForm() {
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className="form-group">
-                <label htmlFor='text'>Book</label>
+                <label htmlFor='text' className='label'>Book</label>
                 <input 
                 type="text" 
                 name='text' 
@@ -29,6 +29,7 @@ function BookForm() {
                 value = {text} 
                 onChange={(e) => setText(e.target.value)}
                  />
+                 <label htmlFor='rating' className='label'> Rating</label>
                  <input 
                 type="text" 
                 name='rating' 

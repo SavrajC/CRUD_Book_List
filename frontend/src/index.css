@@ -218,3 +218,8 @@ h3 {
     font-size: 1.5rem;
   }
 }
+
+.label {
+  opacity: 67%;
+  color: #ffffff;
+}
