@@ -10,6 +10,7 @@ function BookItem({book}) {
         </div>
         <h2>{book.text}</h2>
         <h2>{book.rating}</h2>
+        <p className='review'>{book.review}</p>
         <button onClick= {() => dispatch(deleteBook(book._id))}   className="close">X</button>
     </div>
   )

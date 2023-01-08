@@ -17,6 +17,10 @@ const bookSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add a rating value"],
     },
+    review: {
+      type: String,
+      required: [true, "Please add a review value"],
+    },
   },
   {
     timestamps: true,
